@@ -36,11 +36,22 @@ const router = require("./controllers/api.js");
 app.use(router);
 
 // Connect to the Mongo DB
-mongoose.Promise = Promise;
+//mongoose.Promise = Promise;
 //mongoose.connect("mongodb://localhost/demodata", { useNewUrlParser: true });
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/demodata";
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+//var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/demodata";
+//mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 //mongoose.connect(MONGODB_URI);
+
+const MONGODB_URI =
+    process.env.MONGODB_URI || "mongodb://localhost/scraper_news";
+// mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
+
+//var db = mongoose.connection;
+//db.on("error", console.error.bind(console, "connection error:"));
+//db.once("open", function() {
+//    console.log("Connected to Mongoose!");
+//});
 
 // Start the server
 app.listen(PORT, function() {
