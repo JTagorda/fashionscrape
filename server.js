@@ -43,7 +43,7 @@ app.use(router);
 //mongoose.connect(MONGODB_URI);
 
 const MONGODB_URI =
-    process.env.MONGODB_URI || "mongodb://localhost/scraper_news";
+    process.env.MONGODB_URI || "mongodb://localhost/demodata";
 // mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 mongoose.connect(MONGODB_URI);
 
