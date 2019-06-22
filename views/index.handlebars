@@ -1,0 +1,28 @@
+    <div class="container">
+        <div class="bg-banner text-center col-md-12 mb-2">
+            <span class="mb-0 bannertext speedfont">Fashion Scraper</span>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <a href="/scrape" action="button" class="btn btn-lg btn-block btn-dark">Scrape!</a>
+            </div>
+            <div class="col-md-6">
+                <a href="/notes" action="button" class="btn btn-lg btn-block btn-light">View Notes</a>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-6 mt-3">
+                {{#each things}}
+                <div class="mt-2">
+                    <div class="text-center"><img class="img-fluid" src="{{this.image}}" /></div><br/>
+                    <h3>{{this.title}}</h3><br/>    
+                    <p>{{this.summary}}</p><br/>
+                    <a href="{{this.link}}" class="btn btn-block btn-primary" role="button">View Full Article</a>
+                    <button class="clickybutton btn btn-block btn-warning" data-id="{{this._id}}">Add a Note</button><br/>
+                </div>
+                {{/each}}
+            </div>
+            <div class="mt-2" id="notes"></div>
+
+        </div>
+    </div>
