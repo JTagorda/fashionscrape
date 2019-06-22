@@ -39,8 +39,8 @@ app.use(router);
 mongoose.Promise = Promise;
 //mongoose.connect("mongodb://localhost/demodata", { useNewUrlParser: true });
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/demodata";
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
-//mongoose.connect(MONGODB_URI);
+//mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
 
 // Start the server
 app.listen(PORT, function() {
